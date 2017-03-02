@@ -3,7 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.9.3"
+    "react-scripts": "0.9.3",
+    "autoprefixer": "^6.7.3",
+    "csswring": "^5.1.1",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.3.0",
+    "lost": "^8.0.0",
+    "postcss-css-reset": "^1.0.2",
+    "postcss-partial-import": "^3.1.1",
+    "precss": "^1.4.0",
+    "rucksack-css": "^0.9.1"
   },
   "dependencies": {
     "react": "^15.4.2",
