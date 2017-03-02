@@ -1,0 +1,7 @@
+@import '../../node_modules/react-image-gallery/styles/css/image-gallery.css';
+@import './components/app.css';
+@import './components/carousel.css';
+@import './components/taglist.css';
+@import './components/header.css';
+@import './components/footer.css';
+

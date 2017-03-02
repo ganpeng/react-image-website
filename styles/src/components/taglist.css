@@ -1,0 +1,15 @@
+.taglist-wrapper {
+  position:absolute;
+  top:120px;
+  left:0;
+  bottom:80px;
+  width:100%;;
+  overflow-y:scroll;
+  margin-bottom:30px;
+  .taglist {
+    width:1200px;
+    height:1500px;
+    margin:0 auto;
+    background-color:red;
+  }
+}
