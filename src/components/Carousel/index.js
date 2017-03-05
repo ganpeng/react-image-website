@@ -38,6 +38,9 @@ class Carousel extends Component {
               items={images}
               slideInterval={4000}
               onImageLoad={this.handleImageLoad.bind(this)}
+              showFullscreenButton={false}
+              showPlayButton={false}
+              autoPlay={true}
             />
           </div>
         </div>

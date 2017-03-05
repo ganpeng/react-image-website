@@ -23,12 +23,17 @@
     height:400px;
     margin-left:-300px;
     margin-top:-200px;
-    background-color:pink;
     .image-gallery-right-nav {
       right: -100px;
     }
     .image-gallery-left-nav {
       left: -100px;
+    }
+    img {
+      height:400px;
+    }
+    .image-gallery {
+      height:400px;
     }
   }
 }
