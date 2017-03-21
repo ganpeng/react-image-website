@@ -5,14 +5,13 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 import rootReducer from '../reducers/'
 
-
-export default (initialStore) => {
+export default (initialState) => {
   const store = createStore(
     rootReducer,
+    initialState,
     composeWithDevTools(
       applyMiddleware(thunk)
-    ),
-    initialStore
+    )
   )
 
   return store

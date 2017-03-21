@@ -23,10 +23,17 @@
     margin-top:-20px;
     width:40px;
     height:40px;
-    img {
-      display:block;
-      width:40px;
-      height:40px;
+    &.home-link-btn {
+      background:url('../../images/icons/homelink1.png') no-repeat center center;
+    }
+    &.home-link-btn:hover {
+      background:url('../../images/icons/homelink2.png') no-repeat center center;
+    }
+    &.taglist-link-btn {
+      background:url('../../images/icons/taglistlink1.png') no-repeat center center;
+    }
+    &.taglist-link-btn:hover {
+      background:url('../../images/icons/taglistlink2.png') no-repeat center center;
     }
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 
 import TagList from '../../components/TagList/'
 import Header from '../../components/Header/'
@@ -12,14 +13,14 @@ class TagListPage extends Component {
   };
 
   render() {
+    const { images } = this.props;
     return (
       <div className="taglist-container">
         <Header
-          to="/"
-          img={require('../../../images/taglistlink1.png')}
+          home={true}
         />
         <div className="taglist-wrapper">
-          <TagList />
+          <TagList images={images} />
         </div>
         <Footer />
       </div>
@@ -27,4 +28,12 @@ class TagListPage extends Component {
   }
 }
 
-export default TagListPage;
+
+function mapStateToProps(state) {
+  return {
+    images: state.images
+  }
+}
+
+
+export default connect(mapStateToProps, {})(TagListPage);

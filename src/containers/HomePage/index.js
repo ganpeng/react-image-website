@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 
 import Carousel from '../../components/Carousel/'
 import Header from '../../components/Header/'
@@ -13,17 +14,24 @@ class HomePage extends Component {
 
 
   render() {
+    const { images } = this.props;
     return (
       <div className="home-container">
-        <Header
-          to="/taglist"
-          img={require('../../../images/homelink1.png')}
-        />
-        <Carousel />
+        <Header/>
+        <Carousel images={images} />
         <Footer />
       </div>
     );
   }
 }
 
-export default HomePage;
+function mapStateToProps(state) {
+  return {
+    images: state.images
+  }
+}
+
+
+
+
+export default connect(mapStateToProps, {})(HomePage);
