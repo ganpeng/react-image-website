@@ -1,7 +1,7 @@
   const initialState = [
     {
       tagimage: require('../../images/sources/dr/index.jpg'),
-      tagName: 'DR',
+      tagName: 'dr',
       imagelist: []
     },
     {

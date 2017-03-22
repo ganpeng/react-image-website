@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router-dom';
 import ImageGallery from 'react-image-gallery';
 
 class Carousel extends Component {
@@ -11,29 +12,25 @@ class Carousel extends Component {
     console.log('Image loaded', event.target )
   }
 
+  _renderItem(item) {
+    return (
+      <div className='image-gallery-image'>
+        <Link to={`/imglist/${item.tagName}`}>
+          <img
+              src={item.original}
+              alt="图片"
+          />
+        </Link>
+      </div>
+    )
+  }
 
   render() {
 
-    // const images = [
-    //   {
-    //     original: 'http://lorempixel.com/1000/600/nature/1/',
-    //     thumbnail: 'http://lorempixel.com/250/150/nature/1/'
-    //   },
-    //   {
-    //     original: 'http://lorempixel.com/1000/600/nature/2/',
-    //     thumbnail: 'http://lorempixel.com/250/150/nature/2/'
-    //   },
-    //   {
-    //     original: 'http://lorempixel.com/1000/600/nature/3/',
-    //     thumbnail: 'http://lorempixel.com/250/150/nature/3/'
-    //   }
-    // ]
-
-
-
     const images = this.props.images.map((image) => {
       return {
-        original: image.tagimage
+        original: image.tagimage,
+        tagName: image.tagName
       }
     })
 
@@ -45,10 +42,10 @@ class Carousel extends Component {
               showThumbnails={false}
               items={images}
               slideInterval={4000}
-              onImageLoad={this.handleImageLoad.bind(this)}
               showFullscreenButton={false}
               showPlayButton={false}
               autoPlay={true}
+              renderItem={this._renderItem}
             />
           </div>
         </div>
